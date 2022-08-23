@@ -8,7 +8,33 @@
     <title>Formulário de Cadastro</title>
 
     <script>
+        //Criando uma função em JS, para validar os campos do formulário
+        function validateForm() {
+            let nameField = registration.name.value;
+            let passwordField = registration.password.value;
+            let confirmationPassword = registration.confirmationPassword.value;
 
+            if (nameField == '') {
+                alert('O campo nome é obrigatório');
+                registration.name.focus();
+                return false;
+            }
+            if (passwordField.length <= 5 || !passwordField) {
+                alert('O campo senha deverá ter mais de 5 caracteres.');
+                registration.password.focus();
+                registration.name.value = nameField
+                return false;
+            }
+            
+            else if (confirmationPassword != passwordField) { 
+                alert('A senha principal não está de acordo coma senha de confirmação.');
+                return false;
+            }
+            else {
+                alert('Olá, ' + nameField + "! Seja bem-vinde!");
+            }
+
+        }
     </script>
 
 </head>
