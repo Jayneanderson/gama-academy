@@ -11,10 +11,27 @@
     </style>
 </head>
 <body>
+    <h1>Criando intervenção no HTML</h1>
+    
+    <p id="texto1">Parágrafo 1</p>
+    <p id="texto2">Parágrafo 1</p>
     
     <script>
-
+        /*
+            Atividade
+    
+            1. colher o nome da pessoa usuária;
+            2. guardar em um prompt o nome do usuário e perguntar a idade da pessoa usuária;
+            3. após isso, verificar qual é o e-mail de contato com outro prompt;
+            4. fazer um resumo das informações com o alert
+        */
+        
+        var name = prompt(`Por gentileza, informe seu nome.`);
+        var age = prompt(`Olá, ${name}! Qual é a sua idade?`);
+        var email = prompt(`${name}, agora preencha seu e-mail.`);
+        alert(`A pessoa usuária se chama ${name}, tem ${age} anos e seu e-mail é ${email}`);
     </script>
+
 
 </body>
 </html>
