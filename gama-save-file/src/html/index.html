@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css"/>
+    <title>Página para salvar arquivo</title>
+</head>
+<body>
+    <h1>Salvar arquivo</h1>
+    <div>
+        <label for="title">Nome do arquivo</label>
+        <input type="text" id="title"/>
+    </div>
+    <div class="textarea-container">
+        <label>Informe o texto</label>
+        <textarea cols="40" rows="3" id="text"></textarea>
+    </div>
+
+    <button onclick="save()">Salvar</button>
+
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/saveFile.js"></script>
+</body>
+</html>
