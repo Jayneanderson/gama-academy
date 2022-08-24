@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css"/>
+    <title>Lendo arquivo</title>
+</head>
+<body>
+    <p>Página para ler arquivo</p>
+    
+    <div class="textarea-container">
+        <input type="file" onchange="loadFile(this.files[0])">
+        <textarea id="output"></textarea>
+    </div>
+    <script type="text/javascript" src="../js/readFile.js"></script>
+</body>
+</html>
