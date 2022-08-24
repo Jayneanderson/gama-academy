@@ -1,12 +1,12 @@
 <h1 align="center">Bootcamp Back-end - Gama Academy</h1>
 
-<center>
+<div align="center">
 
-[![badge com o nome onde aprendi na esquerda_na cor cinza e na direita o nome Gama na cor
-    verde](https://img.shields.io/badge/Onde_aprendi-GAMA-6BD163?style=flat-square)](https://app.gama.academy/home/)
-![Badge](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+<a href="https://app.gama.academy/home/"><img src="https://img.shields.io/badge/Onde_aprendi-GAMA-6BD163?style=flat-square" alt="badge com o nome onde aprendi na esquerda_na cor cinza e na direita o nome Gama na cor
+    verde"></a>
+<img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="Badge">
 
-</center>
+</div>
 
 <h2>📇Guia</h2>
 <ul>
@@ -33,7 +33,6 @@
             <li>[x] Feedback</li>
         </ul>
     </li>
-    <li>[x] </li>
     <li>[x] Semana 1
         <ul>
             <li>[x] Metodologias Ágeis</li>
