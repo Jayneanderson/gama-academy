@@ -32,6 +32,8 @@
             <li>[x] Communication Skills</li>
             <li>[x] Feedback</li>
         </ul>
+    </li>
+    <li>[x] </li>
     <li>[x] Semana 1
         <ul>
             <li>[x] Metodologias Ágeis</li>
@@ -46,6 +48,12 @@
         </ul>
     </li>
     <li>[ ] Semana 3</li>
+    <li>[] Semana 2
+        <ul>
+            <li>[] Banco de Dados / MySQL</li>
+        </ul>
+    </li>
+    <li>[] Semana 3</li>
 </ul>
 <h2 id="funcionalidades">🎬 Funcionalidades</h2>
 
