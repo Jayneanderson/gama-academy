@@ -32,7 +32,6 @@
             <li>[x] Communication Skills</li>
             <li>[x] Feedback</li>
         </ul>
-    <li>[x] </li>
     <li>[x] Semana 1
         <ul>
             <li>[x] Metodologias Ágeis</li>
