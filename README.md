@@ -48,12 +48,6 @@
         </ul>
     </li>
     <li>[ ] Semana 3</li>
-    <li>[] Semana 2
-        <ul>
-            <li>[] Banco de Dados / MySQL</li>
-        </ul>
-    </li>
-    <li>[] Semana 3</li>
 </ul>
 <h2 id="funcionalidades">🎬 Funcionalidades</h2>
 
