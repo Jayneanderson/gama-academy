@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/crud-produtos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Sistema de controle de Registros - CRUD</title>
+
+    <!--Como ver a cor de um CSS através de um HexaDecimal-->
+
+</head>
+
+<body>
+    <header>
+        <h2 class="subtitle">Sistema de Controle de Registros - CRUD</h2>
+    </header>
+    <main>
+        <div id="content">
+            <!--Adicionando registros na nossa página-->
+            <h3 class="subtitle">Estoque de produtos Eletrônicos</h3>
+            <!-- <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
+                <div class="container">
+                    <div class="container-fields">
+                        <label for="add-name" class="label-field">Produto</label>
+                        <input type="text" id="add-name" class="field" placeholder="Nome do produto">
+                    </div>
+                    <div class="container-fields">
+                        <label for="add-name" class="label-field">Valor Unitário</label>
+                        <input type="number" id="unitary-value" class="field" step="0.01"
+                            placeholder="Valor do produto">
+                    </div>
+                    <div class="container-fields">
+                        <label for="add-name" class="   label-field">Quantidade</label>
+                        <input type="number" id="ammount" class="field" placeholder="Quantidade">
+                    </div>
+                    <div class="container-fields">
+                        <input type="submit" value="Adicionar" id="add-item" class="button">
+                    </div>
+                </div>
+
+            </form> -->
+
+            <!--Área destinada para editar/modificar os registros -->
+            <div id="spoiler" role="aria-hidden">
+                <form action="javascript:void(0);" method="POST" id="saveEdit">
+                    <div class="container" id="container-edit">
+                        <div class="container-fields">
+                            <label for="edit-name" class="label-field">Produto</label>
+                            <input type="text" id="edit-name" class="field" placeholder="Nome do produto">
+                        </div>
+                        <div class="container-fields">
+                            <label for="edit-value" class="label-field">Valor Unitário</label>
+                            <input type="number" id="edit-value" class="field" step="0.01"
+                                placeholder="Valor do produto">
+                        </div>
+                        <div class="container-fields">
+                            <label for="edit-ammount" class="   label-field">Quantidade</label>
+                            <input type="number" id="edit-ammount" class="field" placeholder="Quantidade">
+                        </div>
+                        <div class="container-fields" id="container-edit">
+                            <input type="submit" value="Editar" id="btn-edit" />
+                            <a id="close" onclick="CloseInput()" aria-label="Close">&#10006;</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="new-and-counter">
+                <a href="#" class="new" onclick="Modal.open()">+ Novo item</a>
+                <!--Contador de Registros-->
+                <small id="counter"></small>
+            </div>
+
+            <!--Criando uma área com a tabela para mostrar os registros armazenados-->
+            <table border="0" class="data-table">
+                <!--Criando uma linha na tabela-->
+                <thead>
+                    <tr class="columns">
+                        <th class="column">Nome</th>
+                        <th class="column">Preço</th>
+                        <th class="column">Quantidade</th>
+                        <th class="column">Total</th>
+                        <th class="column"></th>
+                        <th class="column"></th>
+                    </tr>
+                </thead>
+                <tr>
+                    <tbody id="products">
+                </tr>
+            </table>
+
+            <div>
+                <h3 class="history">Gravar os dados em um arquivo de Estoque.txt</h3>
+                <button onclick="app.save()" id="save" class="button">Salvar</button>
+            </div>
+
+        </div>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2 class="modal-title">Novo Item</h2>
+            <form action="javascript:void(0);" method="POST" id="form">
+                <div class="modal-container">
+                    <div class="container-fields">
+                        <!-- <label for="add-name" class="label-field">Produto</label> -->
+                        <input type="text" id="add-name" class="field" placeholder="Nome do produto">
+                    </div>
+                    <div class="container-fields">
+                        <!-- <label for="add-name" class="label-field">Valor Unitário</label> -->
+                        <input type="number" id="unitary-value" class="field" step="0.01"
+                            placeholder="0,00">
+                    </div>
+                    <div class="container-fields">
+                        <!-- <label for="add-name" class="   label-field">Quantidade</label> -->
+                        <input type="number" id="ammount" class="field" placeholder="Quantidade">
+                    </div>
+                    <div class="container-fields" id="input-group">
+                        <input type="submit" value="Adicionar" id="add-item" class="button" onclick="app.add()">
+                        <button class="button" id="cancel" onclick="Modal.close()">Cancelar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!--Desenvolvendo as funções dentro do JavaScript para gerar o nosso CRUD-->
+    <script>
+        var app = new function () {
+            this.el = document.getElementById('products');
+            this.products = [
+                {
+                    name: "Node",
+                    price: 24.5,
+                    quantify: 2
+                }
+            ];
+
+            this.Count = function (data) {
+                var el = document.getElementById('counter');
+                var name = 'registro';
+
+                if (data) {
+                    if (data > 0) {
+                        name = 'Total';
+                    }
+                    el.innerHTML = name + ':  ' + data;
+                } else {
+                    el.innerHTML = 'Nenhum ' + name;
+                }
+            }
+
+            // Monta a nossa lista de nomes com base na variável que foi setada
+            this.FetchAll = function () {
+                var data = '';
+                if (this.products.length > 0) {
+                    //alert("contou");
+                    //Criando um laço de repetição para montar os registros da tabela
+                    for (var i = 0; i < this.products.length; i++) {
+                        //alert("gera registro");
+                        data += '<tr class="item-list">';
+                        data += '<td class="product-name">' + this.products[i].name + '</td>';
+                        data += '<td class="value">' + this.products[i].price + '</td>';
+                        data += '<td class="quantify">' + this.products[i].quantify + '</td>';
+                        data += '<td class="total">' + (this.products[i].price * this.products[i].quantify).toFixed(2) + '</td>';
+                        data += '<td class="update"><button onclick="app.Edit(' + i + ')"><img src="../img/icon-update.svg"></button></td>';
+                        data += '<td class="delete"><button onclick="app.Delete(' + i + ')"><img src="../img/icon-delete.svg"></button></td>';
+                        data += '</tr>';
+                    }
+                }
+
+                this.Count(this.products.length);
+                return this.el.innerHTML = data;
+            }
+            this.add = function () {
+                var addName = document.getElementById('add-name').value;
+                var price = document.getElementById('unitary-value').value;
+                var ammount = document.getElementById('ammount').value;
+
+                if (addName && price && ammount) {
+                    const newProduct = {
+                        name: addName.trim(),
+                        price: price.trim(),
+                        quantify: ammount.trim()
+                    };
+                    this.products.push(newProduct)
+                    document.getElementById('add-name').value = '';
+                    document.getElementById('unitary-value').value = '';
+                    document.getElementById('ammount').value = '';
+                    this.FetchAll();
+                }
+            }
+            this.Edit = function (item) {
+                var name = document.getElementById('edit-name');
+                var price = document.getElementById('edit-value');
+                var quantify = document.getElementById('edit-ammount');
+                console.log(name.value)
+
+                name.value = this.products[item].name
+                price.value = this.products[item].price
+                quantify.value = this.products[item].quantify
+
+                document.getElementById('spoiler').style.display = 'flex';
+                self = this;
+
+                document.getElementById('saveEdit').onsubmit = function () {
+                    // Obter valor
+                    var editName = name.value;
+                    var editPrice = price.value;
+                    var editQuantify = quantify.value;
+
+                    console.log(item)
+
+                    if (editName && editPrice && editQuantify) {
+                        // Edita o valor
+                        self.products[item].name = editName;
+                        self.products[item].price = editPrice;
+                        self.products[item].quantify = editQuantify;
+                        // Exibe a nova lista
+                        self.FetchAll();
+                        //Ocultar campos
+                        CloseInput();
+                    }
+                }
+            };
+
+            this.Delete = function (item) {
+                this.products.splice(item, 1);
+                this.FetchAll();
+            }
+            this.save = function () {
+                let products = "";
+                let name = "";
+                for (var i = 0; i < this.products.length; i++) {
+                    let product = this.products[i].name
+                    let value = this.products[i].price
+                    let quantify = this.products[i].quantify
+                    products += (i+1) + " - "+ product + " " + value + " " + quantify + "\n";
+                    /*  */
+                }
+                let blob = new Blob([products], { type: 'text/plain;charset=utf-8' });
+                saveAs(blob, "Estoque" + '.txt');
+            }
+        }
+        function CloseInput() {
+            document.getElementById('spoiler').style.display = 'none';
+        }
+
+        Modal = {
+            open() {
+                document
+                .querySelector('.modal-overlay')
+                .classList
+                .add('active')
+
+            },
+            close() {
+                document
+                .querySelector('.modal-overlay')
+                .classList
+                .remove('active')
+            }
+        }
+
+
+        app.FetchAll();
+
+    </script>
+    <!-- <script type="text/javascript" src="../js/index.js"></script> -->
+    <script type="text/javascript" src="../js/saveFile.js"></script>
+</body>
+
+</html>
