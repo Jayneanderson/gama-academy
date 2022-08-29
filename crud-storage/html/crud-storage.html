@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/crud-storage.css" />
+    <title>CRUD com Storage</title>
+
+    <!-- chamada para usar componenetes do Json -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="../js/funcoes.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="subtitle">Crud com Storage</h2>
+    </header>
+
+    <section class="modal">
+        <form id="formCadastro" action="">
+            <div class="modal-container">
+                <div id="modal-title-wrapper">
+                    <img src="../img/icon-gama-academy-green.svg"
+                        alt="Ícone da gama academy na cor laranja com o símbolo branco">
+                    <h2 class="modal-title">Matrícula</h2>
+                </div>
+                <div class="container-fields">
+                    <label for="txtCodigo">Código</label>
+                    <input type="text" name="" value="1" id="txtCodigo" class="field" >
+                </div>
+
+                <div class="container-fields">
+                    <label for="txtNome">Nome</label>
+                    <input type="text" name="" value="Jay" id="txtNome" class="field" >
+                </div>
+
+                <div class="container-fields">
+                    <label for="txtTelefone">Telefone</label>
+                    <input type="text" name="" value="3333" id="txtTelefone" class="field" >
+                </div>
+
+                <div class="container-fields">
+                    <label for="txtEmail">E-mail</label>
+                    <input type="txtEmail" name="" value="jay@gmail.com" id="txtEmail" class="field" >
+                </div>
+
+                <div class="container-fields">
+                    <label for="txtStatus">Status</label>
+                    <input type="text" name="" value="Disponível" id="txtStatus" class="field" >
+                </div>
+
+                <!--         <label for="">Data de Cadastro</label>
+                <input type="date" name="" value="2022-08-28" id="data"> -->
+
+                <button type="submit" id="cadastro">Salvar</button>
+            </div>
+        </form>
+        <aside>
+            <h2 class="modal-title">Lista de cadastros</h2>
+            <table id="tbListar" class="data-table">
+            </table>
+        </aside>
+    </section>
+    <p id="prgfrm"></p>
+</body>
+
+</html>
