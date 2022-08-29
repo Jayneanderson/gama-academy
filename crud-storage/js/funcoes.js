@@ -68,7 +68,7 @@ $(function () {
             nome: $("#txtNome").val(),
             telefone: $("#txtTelefone").val(),
             email: $("#txtEmail").val(),
-            data: $("#txtData").val()
+            data: tableClientes[index].data
         });
         localStorage.setItem("tableClientes", JSON.stringify(tableClientes));
 
