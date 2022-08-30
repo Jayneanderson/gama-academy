@@ -63,12 +63,13 @@ $(function () {
     }
 
     function editar() {
+        var data = JSON.parse(tableClientes[index]).data
         tableClientes[index] = JSON.stringify({
             codigo: $("#txtCodigo").val(),
             nome: $("#txtNome").val(),
             telefone: $("#txtTelefone").val(),
             email: $("#txtEmail").val(),
-            data: tableClientes[index].data
+            data: data
         });
         localStorage.setItem("tableClientes", JSON.stringify(tableClientes));
 
