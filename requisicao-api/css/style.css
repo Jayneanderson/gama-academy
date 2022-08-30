@@ -51,3 +51,8 @@ button {
 #clientName {
     width: 100%;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
