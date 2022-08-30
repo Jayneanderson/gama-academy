@@ -69,3 +69,25 @@ function teste() {
 3. pego o resultado do retorno;
 4. exibo nos campos
 */
+
+
+/* 
+
+========================== Filmes =====================
+1. Pegar nome do filme
+2. URL onde está disponível
+
+OBS: retorne todos os filmes
+*/
+
+var url = 'https://api.tvmaze.com/search/shows?q=star%20wars';
+fetch(url)
+    .then(response => {
+        return response.json();
+    })
+    .then(field => {
+
+        field.forEach(element => {
+            document.getElementById("film").insertAdjacentHTML('afterbegin', `<li><strong>Nome do filme</strong>: ${element.show.name}</li>`)
+        });
+    })
