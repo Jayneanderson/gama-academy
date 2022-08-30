@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Requisição de API</title>
+</head>
+<body>
+
+    <h1>Cotação de um dólar</h1>
+    <p>Valor em real: </p>
+    <p class="dolar" id="dolarValue"></p>
+    <p class="dolar" id="responseDolarName"></p>
+    
+    <!-- Linha horizontal -->
+    <hr>
+    
+    <h1>Busca endereço por CEP</h1>
+    <p class="" id="cep"></p>
+    <p class="" id="distric"></p>
+
+    <hr>
+    <div class="container">
+
+        <h2>Sistema de consulta de CEP</h2>
+        <div class="name-wrapper">
+            <label for="">Nome do cliente</label>
+            <input type="text" id="clientName">
+        </div>
+        <div class="cep-container">
+            <label for="inputCep">Entre com o CEP</label>
+            <input type="text" id="inputCep">
+            <button id="process" onclick="getAdress()">Processar</button>
+            <button id="clear" onclick="clearFields()">Limpar</button>
+        </div>
+        
+        <div>
+            <div class="container-field">
+                <label for="">Endereço</label>
+                <input type="text" id="adress" class="field">
+            </div>
+            <div class="container-field">
+                <label for="">Bairro</label>
+                <input type="text" id="neighborhood">
+            </div>
+            <div class="container-field">
+                <label for="">CEP</label>
+                <input type="text" id="zipCode">
+            </div>
+            <div class="container-field">
+                <label for="">Estado</label>
+                <input type="text" id="state">
+            </div>
+            <div class="container-field">
+                <label for="">Cidade</label>
+                <input type="text" id="city">
+            </div>
+        </div>
+    </div>
+        <script src="../js/api.js"></script>
+    </body>
+</html>

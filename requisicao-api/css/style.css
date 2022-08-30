@@ -1,0 +1,53 @@
+.container {
+    width: 50%;
+}
+
+.cep-container {
+    margin: 2rem 0;
+}
+
+.cep-container label {
+    margin-right: 10px;
+}
+
+#process {
+    margin: 0px 10px;
+}
+
+input, button {
+    height: 2rem;
+    background-color: #EEEEEE;
+    border: 1px solid #212121;
+}
+
+.container-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.container-field label {
+    width: 60px;
+    display: block;
+    margin-right: 10px;
+}
+
+.field {
+    display: flex;
+
+}
+
+button {
+    width: 200px;
+    margin: 0;
+}
+
+.name-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+#clientName {
+    width: 100%;
+}
