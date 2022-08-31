@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/calculadora.css">
+    <title>Calculadora</title>
+
+    <script>
+        function inserir(num) {
+            var numero = document.getElementById('display').innerText;
+
+            //não pode ter dois pontos seguidos
+            if ((num == '.') && (numero + num).indexOf("..") != -1) {
+                return;
+            }
+            document.getElementById('display').innerHTML = numero + num;
+        }
+
+        function clearInput() {
+            var painel = document.getElementById('display');
+            painel.innerText = ''
+        }
+
+        function result() {
+            var painel = document.getElementById('display');
+
+            try {
+                var result = eval(painel.innerText);
+                
+            } catch (error) {
+                alert('Expressão inválida')
+            }
+            
+
+            if (result) {
+                this.inserir('=');
+                painel.insertAdjacentHTML('beforeend', result)
+            }
+
+        }
+
+        function backspace() {
+            var painel = document.getElementById('display');
+
+            if (painel.innerText.length > 0) {
+                var result = painel.innerText.substring(0, painel.innerText.length - 1);
+                painel.innerText = result;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="container-title">
+                <img src="../img/icon-gama-academy.svg" alt="">
+                <h2>Gama Calc</h2>
+            </div>
+            <span id="display"></span>
+
+            <!--cria botões-->
+            <div class="button-container">
+                <div class="button-group">
+
+                    <button id="teclaX" class="button" onclick="backspace()"><img src="../img/delete.svg" /></button>
+                    <button id="teclac" class="button" onclick="clearInput()">C</button>
+                    <button id="tecla%" class="button" onclick="inserir('%')">%</button>
+                    <button id="tecla*" class="button" onclick="inserir('*')">*</button>
+                </div>
+
+                <div class="button-group">
+                    <button id="tecla7" class="button" onclick="inserir('7')">7</button>
+                    <button id="tecla8" class="button" onclick="inserir('8')">8</button>
+                    <button id="tecla9" class="button" onclick="inserir('9')">9</button>
+                    <button id="tecla+" class="button" onclick="inserir('+')">+</button>
+                </div>
+
+                <div class="button-group">
+                    <button id="tecla4" class="button" onclick="inserir('4')">4</button>
+                    <button id="tecla5" class="button" onclick="inserir('5')">5</button>
+                    <button id="tecla6" class="button" onclick="inserir('6')">6</button>
+                    <button id="tecla-" class="button" onclick="inserir('-')">-</button>
+                </div>
+
+                <div class="button-group">
+                    <button id="tecla1" class="button" onclick="inserir('1')">1</button>
+                    <button id="tecla2" class="button" onclick="inserir('2')">2</button>
+                    <button id="tecla3" class="button" onclick="inserir('3')">3</button>
+                    <button id="tecla/" class="button" onclick="inserir('/')">/</button>
+                </div>
+                <div class="button-group">
+                    <button id="tecla0" class="button" onclick="inserir('0')">0</button>
+                    <button id="tecla." class="button" onclick="inserir('.')">.</button>
+                    <button id="teclaIgual" class="button" onclick="result()">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
