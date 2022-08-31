@@ -1,0 +1,66 @@
+/* ========= Estilizando o formulário ======== */
+
+.container {
+    width: 60%;
+}
+
+.form-group {
+    margin: 2rem 0;
+}
+
+.form-group label {
+    margin-right: 10px;
+}
+
+.form-field {
+    width: 30px;
+    text-align: center;
+}
+
+#process {
+    margin: 0px 10px;
+}
+
+input, button {
+    height: 2rem;
+    background-color: #EEEEEE;
+    border: 1px solid #212121;
+}
+
+.container-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.container-field label {
+    width: 60px;
+    display: block;
+    margin-right: 10px;
+}
+
+.field {
+    display: flex;
+
+}
+
+button {
+    width: 200px;
+    margin: 0;
+}
+
+.name-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#verses {
+    background-color: #EEEEEE;
+    padding: 24px;
+}
