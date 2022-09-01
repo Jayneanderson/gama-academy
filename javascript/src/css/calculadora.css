@@ -1,9 +1,9 @@
 .main {
     height: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 
 .container {
@@ -89,4 +89,27 @@ h2 {
 
 #teclaIgual:active {
     background-color: #1B5E20;
+}
+
+.button-history {
+    width: 227px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 1px solid #212121;
+    background-color: #ffffff;
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.button-history:hover {
+    background-color: #4CAF50;
+    color: #ffffff;
+    transition: .2s;
 }

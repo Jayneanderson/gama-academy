@@ -9,6 +9,7 @@
     <title>Calculadora</title>
 
     <script>
+        var logs = []
         function inserir(num) {
             var numero = document.getElementById('display').innerText;
 
@@ -29,15 +30,16 @@
 
             try {
                 var result = eval(painel.innerText);
-                
+
             } catch (error) {
                 alert('Expressão inválida')
             }
-            
 
             if (result) {
                 this.inserir('=');
                 painel.insertAdjacentHTML('beforeend', result)
+                console.log(logs)
+                logs.push(painel.innerText + '\n')
             }
 
         }
@@ -51,7 +53,15 @@
             }
         }
 
+        function saveHistory() {
+            
+            //todo texto antes de ser armazenado terá caracteres especiais tratados
+            let blob = new Blob([logs.join("")], { type: 'text/plain;charset=utf-8' });
+
+            saveAs(blob, "log_de_expressões" + '.txt');
+        }
     </script>
+    <script src="../js/saveFile.js"></script>
 
 </head>
 
@@ -100,6 +110,9 @@
                     <button id="teclaIgual" class="button" onclick="result()">=</button>
                 </div>
             </div>
+        </div>
+        <div class="button-container">
+            <button class="button-history" type="button" onclick="saveHistory()">Salvar histórico</button>
         </div>
     </main>
 </body>
