@@ -42,11 +42,23 @@
         </ul>
     </li>
     <li>[ ] Semana 2
+    </li>
+    <li>[ ] Semana 3</li>
         <ul>
             <li>[ ] Banco de Dados / MySQL</li>
         </ul>
-    </li>
-    <li>[ ] Semana 3</li>
+    <li>[ ] Semana 4</li>
+        <ul>
+            <li>[ ] Fundamentos de Node</li>
+        </ul>
+    <li>[ ] Semana 5</li>
+        <ul>
+            <li>[ ] Express I</li>
+        </ul>
+    <li>[ ] Semana 6</li>
+        <ul>
+            <li>[ ] Apresentação de projeto</li>
+        </ul>
 </ul>
 <h2 id="funcionalidades">🎬 Funcionalidades</h2>
 
