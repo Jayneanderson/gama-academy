@@ -13,7 +13,7 @@
     <li><a href="#bootcamp-back-end">Bootcamp Back-end</a></li>
     <li><a href="#status-do-bootcamp">Status do Bootcamp</a></li>
     <li><a href="#checklist">Checklist</a></li>
-    <li><a href="#funcionalidades">Funcionalidades</a></li>
+    <li><a href="#principaisAprendizados">Funcionalidades</a></li>
     <li><a href="#tecnologias-utilizadas">Tecnologias utilizadas</a></li>
     <li><a href="#autor">Autor</a></li>
 </ul>
@@ -41,15 +41,15 @@
             <li>[x] Fundamentos do JavaScript</li>
         </ul>
     </li>
-    <li>[ ] Semana 2
+    <li>[x] Semana 2
     </li>
-    <li>[ ] Semana 3</li>
+    <li>[x] Semana 3</li>
         <ul>
-            <li>[ ] Banco de Dados / MySQL</li>
+            <li>[x] Banco de Dados / MySQL</li>
         </ul>
-    <li>[ ] Semana 4</li>
+    <li>[x] Semana 4</li>
         <ul>
-            <li>[ ] Fundamentos de Node</li>
+            <li>[x] Fundamentos de Node</li>
         </ul>
     <li>[ ] Semana 5</li>
         <ul>
@@ -60,13 +60,10 @@
             <li>[ ] Apresentação de projeto</li>
         </ul>
 </ul>
-<h2 id="funcionalidades">🎬 Funcionalidades</h2>
+<h2 id="principaisAprendizados">🎬 Principais Aprendizados</h2>
 
 <ul>
-    <li>Validar entrada de dados em formulário</li>
-    <li>Criar tabuada com HTML, CSS e JS</li>
-    <li>Salvar texto em arquivo txt</li>
-    <li>Ler arquivo txt e exibir em um textarea</li>
+    <li>Utilizar instruções SQL com Node sem framework</li>
 </ul>
 
 <h2 id="tecnologias-utilizadas">💻 Tecnologias utilizadas</h2>
@@ -79,6 +76,12 @@
     </li>
     <li><img src="./javascript/src/img/icon-css.svg" alt="Ícone do CSS">
         CSS
+    </li>
+    <li><img src="./javascript/src/img/icon-node.svg" alt="Ícone do Node">
+        Node
+    </li>
+    <li><img src="./javascript/src/img/icon-mysql.svg" alt="Ícone do MySQL">
+        Mysql
     </li>
 </ul>
 <h2 id="autor">🤖‍ Autor</h2>
