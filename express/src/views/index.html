@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css"> 
+    apague o de baixo e descomente este
+    <title>Lista de usuários</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="h1">Cadastro de usuários</h1>
+    </header>
+
+    <main class="main">
+        <form method="post" action="/" class="form">
+            <div class="form-container">
+                <div class="form-group-container">
+                    <div class="form-group">
+                        <label for="">Idade</label>
+                        <input class="form-input" type="number" id="idade" name="idade" required />
+                        <div class="form-group">
+                            <label for="">Gênero</label>
+                            <select class="form-input select" name="genero" id="genero">
+                                <option class="option" class="option" value="cisgênero">Cisgênero</option>
+                                <option class="option" value="transgênero">Transgênero</option>
+                                <option class="option" value="não-binário">Não-binário</option>
+                                <option class="option" value="prefiro não informar">Prefiro não informar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <span for="">Estudante:</span>
+                    </div>
+                    <div class="form-group radio-wrapper" id="group-radio">
+                        <div class="form-group-radio">
+                            <label class="label" for="nao">Não</label>
+                            <input class="form-input radio" type="radio" id="nao" value="n" name="isEstudante" required/>
+                        </div>
+                        <div class="form-group-radio">
+                            <label class="label" for="sim">Sim</label>
+                            <input class="form-input radio" type="radio" id="sim" value="s" name="isEstudante" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-container" id="form-group-right">
+                    <div class="form-group-wrapper">
+                        <div class="form-group">
+                            <label for="">Nome</label>
+                            <input class="form-input" type="text" id="nome" name="nome" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">E-mail</label>
+                            <input class="form-input" type="email" id="email" name="email" required />
+                        </div>
+                                            <div class="form-group">
+                        <label for="">Telefone</label>
+                        <input class="form-input" type="tel" id="idade" name="telefone" placeholder="Exemplo: 075983101948" required />
+                    </div>
+                    </div>
+                        <input class="form-input button" type="submit" value="Salvar">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
