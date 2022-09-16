@@ -34,6 +34,11 @@ Aplicação para cadastro de usuários
 <h1 id="tecnologias">⌨️ Tecnologias</h1>
 
 
+- [Node.js](https://nodejs.org/en/) | [Express](https://expressjs.com/pt-br/)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) | [CSS](https://www.w3schools.com/css/) | [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Docker](https://www.docker.com/)
+- [MySQL](https://www.mysql.com/) | [Sequelize](https://sequelize.org/)
+
 <h1 id="executando">🎬 Como executar</h1>
 
 Realize os seguintes passos:
@@ -58,11 +63,6 @@ $ npx sequelize db:migrate
 # Execute a aplicação
 $ npm start
 ```
-
-- [Node.js](https://nodejs.org/en/) | [Express](https://expressjs.com/pt-br/)
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) | [CSS](https://www.w3schools.com/css/) | [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Docker](https://www.docker.com/)
-- [MySQL](https://www.mysql.com/) | [Sequelize](https://sequelize.org/)
 
 <h1 id="aprendizados">📚 Principais aprendizados</h1>
 
