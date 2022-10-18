@@ -56,7 +56,7 @@
             <li>[x] Express I</li>
             <li>[x] Express II</li>
         </ul>
-    <li>[ ] Semana 6</li>
+    <li>[x] Semana 6</li>
         <ul>
             <li>[x] Apresentação de projeto</li>
         </ul>
