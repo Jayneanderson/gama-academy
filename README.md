@@ -51,13 +51,14 @@
         <ul>
             <li>[x] Fundamentos de Node</li>
         </ul>
-    <li>[ ] Semana 5</li>
+    <li>[x] Semana 5</li>
         <ul>
-            <li>[ ] Express I</li>
+            <li>[x] Express I</li>
+            <li>[x] Express II</li>
         </ul>
     <li>[ ] Semana 6</li>
         <ul>
-            <li>[ ] Apresentação de projeto</li>
+            <li>[x] Apresentação de projeto</li>
         </ul>
 </ul>
 <h2 id="principaisAprendizados">🎬 Principais Aprendizados</h2>
